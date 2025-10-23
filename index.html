@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chloe Hailey M. Magsanay - Personal Bio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* --- Variable & Base Styles --- */
+        :root {
+            /* Colors sampled from the image */
+            --pearl-bg: #f5f2ee;
+            --soft-beige: #e9e0d1;
+            --text-dark: #333333;
+            --accent-brown: #a0816a;
+            --light-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            /* Elegant, classic font */
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--pearl-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* --- Main Container & Pearl Effect --- */
+        .bio-container {
+            width: 100%;
+            max-width: 800px;
+            /* Using a subtle radial gradient to mimic the soft, pearlescent background */
+            background: var(--pearl-bg);
+            background-image: radial-gradient(circle at top left, rgba(255, 255, 255, 0.5) 0%, transparent 60%),
+                radial-gradient(circle at bottom right, var(--soft-beige) 0%, transparent 70%);
+            padding: 40px 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* --- Header & Navigation --- */
+        .header-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px 40px;
+            /* Vertical and horizontal gap */
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            /* Separator like in the image */
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-image-large {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            /* Border and shadow to lift the image */
+            box-shadow: var(--light-shadow);
+            flex-shrink: 0;
+        }
+
+        .header-content {
+            flex-grow: 1;
+            min-width: 200px;
+        }
+
+        .greeting {
+            font-size: 1.1em;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .name {
+            font-size: 1.6em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-button {
+            background-color: var(--soft-beige);
+            color: var(--text-dark);
+            padding: 10px 20px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 30px;
+            /* Rounded pill shape */
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+        }
+
+        .nav-button:hover {
+            background-color: var(--accent-brown);
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: var(--light-shadow);
+        }
+
+        .nav-button i {
+            margin-right: 5px;
+            color: #d14949;
+            /* Soft red heart */
+            transition: color 0.3s;
+        }
+
+        .nav-button:hover i {
+            color: white;
+        }
+
+        /* --- About Me Section --- */
+        .about-section-content {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .profile-image-small {
+            width: 140px;
+            height: 190px;
+            /* Taller shape like in the image */
+            object-fit: cover;
+            /* Rounded corners on the square block */
+            border-radius: 10px;
+            box-shadow: var(--light-shadow);
+            flex-shrink: 0;
+            /* Prevents image from shrinking */
+        }
+
+        .bio-text p {
+            font-size: 1.05em;
+            text-align: justify;
+            margin-top: 10px;
+        }
+
+        /* --- Contact Section --- */
+        .contact-section {
+            padding-top: 30px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .social-links {
+            margin-top: 15px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            font-size: 1em;
+            color: var(--text-dark);
+            text-decoration: none;
+            margin: 10px 0;
+            transition: color 0.2s;
+        }
+
+        .social-link:hover {
+            color: var(--accent-brown);
+        }
+
+        .social-link i {
+            font-size: 1.4em;
+            margin-right: 10px;
+        }
+
+        .fa-facebook-square {
+            color: #4267B2;
+            /* Facebook blue */
+        }
+
+        .fa-instagram {
+            color: #E1306C;
+            /* Instagram pink/red */
+        }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 600px) {
+            .bio-container {
+                padding: 20px 15px;
+                margin: 20px;
+            }
+
+            .header-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .header-content {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-buttons {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .about-section-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .bio-text p {
+                text-align: left;
+            }
+
+            .profile-image-small {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bio-container">
+
+        <header class="header-section">
+            <img src="C:\Users\Administrator\Documents\MAGSANAY\auto picture.jpg" alt="Chloe Magsanay Profile"
+                class="profile-image-large">
+
+            <div class="header-content">
+                <p class="greeting">Annyeong! I am</p>
+                <h1 class="name">Chloe Hailey M. Magsanay</h1>
+
+                <nav class="nav-buttons">
+                    <a href="#about-section" class="nav-button">ABOUT ME</a>
+                    <a href="#contact-section" class="nav-button"><i class="fas fa-heart"></i> CONTACT ME</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section id="about-section">
+                <div class="about-section-content">
+                    <img src="C:\Users\Administrator\Documents\MAGSANAY\auto picture.jpg" alt="Chloe Magsanay Portrait"
+                        class="profile-image-small">
+
+                    <div class="bio-text">
+                        <p>I’m Chloe Hailey M. Magsanay, a Computer Technology student from Lapu-Lapu City College. I
+                            find joy in life’s simple moments — spending time with loved ones, reading books, helping
+                            others, and enjoying iced coffee while reflecting on my dreams. Known for being softhearted
+                            and thoughtful, I aim to use technology to bring positivity and make a difference. Like a
+                            pearl formed through patience and care, I continue to grow, learn, and shine in my own quiet
+                            way.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact-section" class="contact-section">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/chloe.federicos.5/" target="_blank" class="social-link">
+                        <i class="fab fa-facebook-square"></i> Facebook: https://www.facebook.com/chloe.federicos.5/
+                    </a>
+                    <a href="https://www.instagram.com/chlfdr_/" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i> Instagram: https://www.instagram.com/chlfdr_/
+                    </a>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+</body>
+
+</html>
